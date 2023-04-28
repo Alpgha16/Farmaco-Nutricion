@@ -49,7 +49,7 @@
     <tbody>
             <?php
             $sql2 = "SELECT relaciones.id as id_rel, bibliografias.titulo as titulo, bibliografias.id as biblio, farmacos.id as farmaco FROM farmacos LEFT JOIN relaciones ON farmacos.id = relaciones.id_farmaco LEFT JOIN bibliografias ON relaciones.id_bibliografia = bibliografias.id WHERE farmacos.id = {$id}";
-            $query2 = mysqli_query($conn2, $sql2);
+            $query2 = mysqli_query($conn, $sql2);
             $num = 1;
             while($mostrar2 = mysqli_fetch_array($query2)){
             ?>
