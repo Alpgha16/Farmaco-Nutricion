@@ -4,7 +4,6 @@
 
 <?php
     $sql = "SELECT * FROM bibliografias WHERE id = {$id}";
-    $conn = mysqli_connect('127.0.0.1', 'root', 'Pdnejoh1029$', 'laravel');
     $query = mysqli_query($conn, $sql);
     $mostrar = mysqli_fetch_array($query)
 ?>
