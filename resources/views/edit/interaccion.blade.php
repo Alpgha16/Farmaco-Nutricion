@@ -4,7 +4,6 @@
 
 <?php
     $sql = "SELECT farmacos.id as id, farmacos.farmaco as farmaco, interacciones.recomendacion as interaccion, interacciones.id as id_inter FROM farmacos LEFT JOIN interacciones ON farmacos.id = interacciones.id_farmaco WHERE farmacos.id = {$id} AND interacciones.id = {$id_int}";
-    $conn = mysqli_connect('127.0.0.1', 'root', 'Pdnejoh1029$', 'laravel');
     $query = mysqli_query($conn, $sql);
     $mostrar = mysqli_fetch_array($query)
 ?>
@@ -44,7 +43,6 @@
     <tbody>
             <?php
             $sql2 = "SELECT * FROM interacciones WHERE id_farmaco = {$id} AND estatus = 1";
-            $conn2 = mysqli_connect('127.0.0.1', 'root', 'Pdnejoh1029$', 'laravel');
             $query2 = mysqli_query($conn2, $sql2);
             $num = 1;
             while($mostrar2 = mysqli_fetch_array($query2)){
