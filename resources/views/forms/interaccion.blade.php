@@ -4,7 +4,6 @@
 
 <?php
     $sql = "SELECT * FROM farmacos WHERE id = {$id}";
-    $conn = mysqli_connect('127.0.0.1', 'root', 'Pdnejoh1029$', 'laravel');
     $query = mysqli_query($conn, $sql);
     $mostrar = mysqli_fetch_array($query)
 ?>
@@ -42,8 +41,7 @@
     </thead>
     <tbody>
             <?php
-            $sql2 = "SELECT * FROM interacciones WHERE id_farmaco = {$id} AND estatus = 1";
-            $conn2 = mysqli_connect('127.0.0.1', 'root', 'Pdnejoh1029$', 'laravel');
+            $sql2 = "SELECT * FROM interacciones WHERE id_farmaco = {$id}";
             $query2 = mysqli_query($conn2, $sql2);
             $num = 1;
             while($mostrar2 = mysqli_fetch_array($query2)){
