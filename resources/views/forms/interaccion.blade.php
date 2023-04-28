@@ -42,7 +42,7 @@
     <tbody>
             <?php
             $sql2 = "SELECT * FROM interacciones WHERE id_farmaco = {$id}";
-            $query2 = mysqli_query($conn2, $sql2);
+            $query2 = mysqli_query($conn, $sql2);
             $num = 1;
             while($mostrar2 = mysqli_fetch_array($query2)){
                 $id_inter = $mostrar2['id'];
