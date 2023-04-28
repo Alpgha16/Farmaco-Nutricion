@@ -36,7 +36,7 @@
         <select class="form-select" id="floatingSelect" name="grupo" aria-label="Floating label select example">
             <option selected>Seleccionar Grupo</option>
             <?php
-                $sql = 'SELECT * FROM grupos;
+                $sql = 'SELECT * FROM grupos';
                 $query = mysqli_query($conn, $sql);
                 while($mostrar = mysqli_fetch_array($query)){
             ?>
