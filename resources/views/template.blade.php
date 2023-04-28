@@ -28,7 +28,7 @@
             <li><a href="/bibliografia" class="nav-link px-2 text-white">Bibliografia</a></li>
         </ul>
     </header>
-
+<?php $conn = mysqli_connect('****', '****', '****', '****') ?>
 @yield('content')
 
 </body>
