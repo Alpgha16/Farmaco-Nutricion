@@ -18,8 +18,7 @@
         </thead>
         <tbody>
             <?php
-            $sql = 'SELECT * FROM bibliografias WHERE estatus = 1';
-            $conn = mysqli_connect('127.0.0.1', 'root', 'Pdnejoh1029$', 'laravel');
+            $sql = 'SELECT * FROM bibliografias';
             $query = mysqli_query($conn, $sql);
             $num = 1;
             while($mostrar = mysqli_fetch_array($query)){
