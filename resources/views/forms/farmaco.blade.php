@@ -36,8 +36,7 @@
         <select class="form-select" id="floatingSelect" name="grupo" aria-label="Floating label select example">
             <option selected>Seleccionar Grupo</option>
             <?php
-                $sql = 'SELECT * FROM grupos WHERE estatus = 1';
-                $conn = mysqli_connect('127.0.0.1', 'root', 'Pdnejoh1029$', 'laravel');
+                $sql = 'SELECT * FROM grupos;
                 $query = mysqli_query($conn, $sql);
                 while($mostrar = mysqli_fetch_array($query)){
             ?>
