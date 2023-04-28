@@ -4,7 +4,6 @@
 
 <?php
     $sql = "SELECT * FROM farmacos WHERE id = {$id}";
-    $conn = mysqli_connect('127.0.0.1', 'root', 'Pdnejoh1029$', 'laravel');
     $query = mysqli_query($conn, $sql);
     $mostrar = mysqli_fetch_array($query)
 ?>
@@ -24,8 +23,7 @@
         <select class="form-select" id="floatingSelect" name="bibliografia" aria-label="Floating label select example">
             <option selected>Seleccionar Bibliografia</option>
             <?php
-                $sql = 'SELECT * FROM bibliografias WHERE estatus = 1';
-                $conn = mysqli_connect('127.0.0.1', 'root', 'Pdnejoh1029$', 'laravel');
+                $sql = 'SELECT * FROM bibliografias';
                 $query = mysqli_query($conn, $sql);
                 while($mostrar3 = mysqli_fetch_array($query)){
             ?>
@@ -51,7 +49,6 @@
     <tbody>
             <?php
             $sql2 = "SELECT relaciones.id as id_rel, bibliografias.titulo as titulo, bibliografias.id as biblio, farmacos.id as farmaco FROM farmacos LEFT JOIN relaciones ON farmacos.id = relaciones.id_farmaco LEFT JOIN bibliografias ON relaciones.id_bibliografia = bibliografias.id WHERE farmacos.id = {$id}";
-            $conn2 = mysqli_connect('127.0.0.1', 'root', 'Pdnejoh1029$', 'laravel');
             $query2 = mysqli_query($conn2, $sql2);
             $num = 1;
             while($mostrar2 = mysqli_fetch_array($query2)){
