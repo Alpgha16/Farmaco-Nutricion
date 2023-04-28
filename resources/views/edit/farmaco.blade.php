@@ -38,7 +38,7 @@
         <select class="form-select" id="inputGroupSelect02" name="grupo">
             <option value="<?php echo $mostrar['id_grupo'] ?>">Conservar Grupo Actual</option>
             <?php
-                $sql = 'SELECT * FROM grupos WHERE estatus = 1';
+                $sql = 'SELECT * FROM grupos';
                 $query = mysqli_query($conn, $sql);
                 while($mostrar3 = mysqli_fetch_array($query)){
             ?>
